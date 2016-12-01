@@ -1,0 +1,6 @@
+---
+  - name: update source list
+    copy: src=aliyun.list dest=/etc/apt/sources.list.d/
+    become: true
+  - apt: name=git state=present
+    become: true

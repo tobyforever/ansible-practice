@@ -1,0 +1,7 @@
+---
+# this playbook deplys a dev server with nginx
+
+- hosts: ubuntu
+  remote_user: vagrant
+  roles:
+    - common
