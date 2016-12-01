@@ -1,6 +1,9 @@
 ---
+  - name: copy private key
+    copy: src=~/.ssh/id_rsa dest=~/.ssh/id_rsa mode="0600"
   - name: update source list
     copy: src=aliyun.list dest=/etc/apt/sources.list
     become: true
   - apt: name=git state=present update_cache=yes autoremove=yes
     become: true
+  - git: repo=git@git.coding.net:tobyforever/vue2demo.git dest=~/workpspace accept_hostkey=true
