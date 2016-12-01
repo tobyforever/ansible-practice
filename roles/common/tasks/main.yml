@@ -1,6 +1,6 @@
 ---
   - name: update source list
-    copy: src=aliyun.list dest=/etc/apt/sources.list.d/
+    copy: src=aliyun.list dest=/etc/apt/sources.list
     become: true
   - apt: name=git state=present update_cache=yes autoremove=yes
     become: true
